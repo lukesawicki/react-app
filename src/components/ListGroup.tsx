@@ -8,6 +8,8 @@ import "bootstrap/dist/css/bootstrap.css";
 interface Props {
     items: string[];
     heading: string;
+    // we will create here signature of the function: (item: string) => void
+    onSelectItem: (item: string) => void;
 }
 
 function ListGroup({ items, heading }: Props) {
