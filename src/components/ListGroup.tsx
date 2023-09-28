@@ -12,7 +12,7 @@ interface Props {
     onSelectItem: (item: string) => void;
 }
 
-function ListGroup({ items, heading }: Props) {
+function ListGroup({ items, heading, onSelectItem }: Props) {
     const [selectedIndex, setselectedIndex] = useState(-1);
     // let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
     return (
@@ -30,6 +30,7 @@ function ListGroup({ items, heading }: Props) {
                         key={item}
                         onClick={() => {
                             setselectedIndex(index);
+                            onSelectItem(item);
                         }}
                     >
                         {item}
